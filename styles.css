@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+.greeting {
+    margin-bottom: 2rem;
+}
+
+#hi-text {
+    font-size: 4rem;
+    font-weight: 700;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+.typing-container {
+    min-height: 2.5rem;
+    margin-top: 1rem;
+}
+
+#typing-text {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.navigation {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards 2s;
+}
+
+.navigation ul {
+    list-style: none;
+}
+
+.navigation li {
+    margin: 1rem 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+.navigation li:nth-child(1) { animation-delay: 2.2s; }
+.navigation li:nth-child(2) { animation-delay: 2.4s; }
+.navigation li:nth-child(3) { animation-delay: 2.6s; }
+.navigation li:nth-child(4) { animation-delay: 2.8s; }
+
+.navigation a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #64ffda;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    #hi-text {
+        font-size: 3rem;
+    }
+    
+    #typing-text {
+        font-size: 1.5rem;
+    }
+    
+    .navigation a {
+        font-size: 1.2rem;
+    }
+} 
