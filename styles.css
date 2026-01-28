@@ -18,6 +18,9 @@ body {
     text-align: center;
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
+    width: 100%;
+    max-width: 900px;
+    padding: 0 20px;
 }
 
 .greeting {
@@ -105,4 +108,38 @@ body {
     .navigation a {
         font-size: 1.2rem;
     }
+}
+
+#about-text {
+    width: 100%;
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 15px;
+    line-height: 1.6;
+    font-size: 1.1em;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+#about-text.visible {
+    opacity: 1;
+}
+
+.hidden {
+    display: none;
+}
+
+.navigation li {
+    margin: 1rem 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+.navigation li > a {
+    display: block;
+    margin-bottom: 0.5rem;
 } 
